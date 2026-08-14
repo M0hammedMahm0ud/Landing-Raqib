@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raqib - AI-Powered Shoplifting Detection System</title>
+    <meta
+      name="description"
+      content="Stop theft before it happens with Raqib's advanced AI detection system. Real-time alerts, mobile notifications, and 24/7 monitoring."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="bg-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <img src="assets/logo.png" alt="Raqib Logo" class="logo-img" />
+            <span>Raqib</span>
+          </div>
+          <div class="nav-links" id="navLinks">
+            <a href="#demo">Demo</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="nav-actions">
+            <a href="/app" class="btn-secondary">Login</a>
+            <a href="#contact" class="btn-primary">Get Started</a>
+          </div>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav>
+        <a href="#demo">Demo</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-btns">
+        <a href="/app" class="btn-secondary">Login</a>
+        <a href="#contact" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badge">
+              <i class="fas fa-sparkles"></i>
+              AI-Powered Protection
+            </div>
+            <h1 class="hero-title">
+              Stop Theft <span class="gradient-text">Before</span> It Happens
+            </h1>
+            <p class="hero-description">
+              Raqib uses advanced AI and computer vision to detect suspicious
+              behavior in real-time, alerting your team instantly and preventing
+              losses before they occur.
+            </p>
+            <div class="hero-cta">
+              <a href="#contact" class="btn-large btn-primary">
+                <i class="fas fa-rocket"></i>
+                Start Free Trial
+              </a>
+              <a href="#demo" class="btn-large btn-outline">
+                <i class="fas fa-play-circle"></i>
+                Watch Demo
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-value">98%</div>
+                <div class="stat-label">Detection Accuracy</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">&lt;2s</div>
+                <div class="stat-label">Alert Response Time</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Monitoring</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="floating-card card-1">
+              <i class="fas fa-shield-check"></i>
+              <div>
+                <strong>Threat Detected</strong>
+                <p>Suspicious activity at Gate 3</p>
+              </div>
+            </div>
+            <div class="floating-card card-2">
+              <i class="fas fa-bell"></i>
+              <div>
+                <strong>Alert Sent</strong>
+                <p>Security team notified</p>
+              </div>
+            </div>
+            <div class="floating-card card-3">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong>Incident Resolved</strong>
+                <p>Loss prevented: $245</p>
+              </div>
+            </div>
+            <div class="hero-mockup">
+              <div class="mockup-screen">
+                <div class="mockup-header">
+                  <div class="mockup-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="mockup-title">Raqib Dashboard</span>
+                </div>
+                <div class="mockup-content">
+                  <div class="pulse-indicator"></div>
+                  <div class="camera-grid">
+                    <div class="camera-feed active"></div>
+                    <div class="camera-feed"></div>
+                    <div class="camera-feed"></div>
+                    <div class="camera-feed active"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="demo-section" id="demo">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">See It In Action</div>
+          <h2 class="section-title">
+            Watch Raqib <span class="gradient-text">Detect</span> in Real-Time
+          </h2>
+          <p class="section-description">
+            Experience how our AI-powered system identifies suspicious behavior
+            and prevents theft before it happens
+          </p>
+        </div>
+        <div class="demo-video-container">
+          <div class="video-wrapper">
+            <div class="video-placeholder">
+              <i class="fas fa-play-circle"></i>
+              <p>Demo Video</p>
+              <span>Click to watch how Raqib protects your business</span>
+            </div>
+            <!-- Replace with actual video when ready -->
+            <!-- <iframe
+                        src="YOUR_VIDEO_URL"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe> -->
+          </div>
+          <div class="demo-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <div class="highlight-content">
+                <h4>Real-Time Detection</h4>
+                <p>Watch as suspicious behavior is identified instantly</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <div class="highlight-content">
+                <h4>Instant Alerts</h4>
+                <p>See how notifications reach your team in seconds</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="highlight-content">
+                <h4>Analytics Dashboard</h4>
+                <p>Explore comprehensive insights and reporting</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Trusted By</div>
+          <h2 class="section-title">Trusted by Leading Retailers</h2>
+          <p class="section-description">
+            Join hundreds of businesses protecting their stores with Raqib
+          </p>
+        </div>
+        <div class="partners-logos">
+          <div class="partner-item">
+            <div class="partner-box">Your Logo Here</div>
+          </div>
+          <div class="partner-item">
+            <div class="partner-box">Your Logo Here</div>
+          </div>
+          <div class="partner-item">
+            <div class="partner-box">Your Logo Here</div>
+          </div>
+          <div class="partner-item">
+            <div class="partner-box">Your Logo Here</div>
+          </div>
+          <div class="partner-item">
+            <div class="partner-box">Your Logo Here</div>
+          </div>
+          <div class="partner-item">
+            <div class="partner-box">Your Logo Here</div>
+          </div>
+        </div>
+        <div class="partners-stats">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-text">Active Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">2M+</div>
+            <div class="stat-text">Incidents Prevented</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-text">Satisfaction Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-text">Support Available</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Features</div>
+          <h2 class="section-title">
+            Everything You Need to Protect Your Business
+          </h2>
+          <p class="section-description">
+            Advanced AI technology meets intuitive design for comprehensive
+            theft prevention
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon violet">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>AI Detection</h3>
+            <p>
+              Advanced computer vision powered by YOLOv8 detects suspicious
+              behavior with 98% accuracy
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Real-Time Alerts</h3>
+            <p>
+              Instant push notifications to mobile devices and desktop apps the
+              moment threats are detected
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3>Multi-Camera Support</h3>
+            <p>
+              Monitor unlimited cameras with intelligent prioritization and
+              automated threat tracking
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon yellow">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile App</h3>
+            <p>
+              Manage security on-the-go with our Flutter-powered mobile
+              application for iOS and Android
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon red">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Analytics Dashboard</h3>
+            <p>
+              Comprehensive insights and reports to identify patterns and
+              optimize security strategies
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Cloud Backup</h3>
+            <p>
+              Secure cloud storage for all incidents with automated backups and
+              easy retrieval
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">How It Works</div>
+          <h2 class="section-title">Three Steps to Complete Protection</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <div class="step-icon">
+                <i class="fas fa-video"></i>
+              </div>
+              <h3>Install & Connect</h3>
+              <p>
+                Connect your existing CCTV cameras to our AI-powered system.
+                Quick setup in under 30 minutes.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-connector"></div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <div class="step-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>AI Monitors 24/7</h3>
+              <p>
+                Our AI continuously analyzes video feeds, detecting suspicious
+                behavior patterns in real-time.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-connector"></div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <div class="step-icon">
+                <i class="fas fa-shield-check"></i>
+              </div>
+              <h3>Instant Response</h3>
+              <p>
+                Security team receives instant alerts on mobile devices,
+                preventing theft before it happens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Pricing</div>
+          <h2 class="section-title">Choose Your Protection Plan</h2>
+          <p class="section-description">
+            Flexible plans that grow with your business
+          </p>
+        </div>
+
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Pro</h3>
+              <p>Perfect for small to medium businesses</p>
+            </div>
+            <div class="pricing-price">
+              <span class="currency">$</span>
+              <span class="amount">199</span>
+              <span class="period">/month</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Up to 10 cameras</li>
+              <li><i class="fas fa-check"></i> Real-time AI detection</li>
+              <li><i class="fas fa-check"></i> Mobile alerts</li>
+              <li><i class="fas fa-check"></i> Local storage</li>
+              <li><i class="fas fa-check"></i> 5 user accounts</li>
+              <li><i class="fas fa-check"></i> Email support</li>
+            </ul>
+            <a href="#contact" class="btn-outline btn-block">Get Started</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="popular-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Ultra</h3>
+              <p>For larger operations requiring advanced features</p>
+            </div>
+            <div class="pricing-price">
+              <span class="currency">$</span>
+              <span class="amount">399</span>
+              <span class="period">/month</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Unlimited cameras</li>
+              <li><i class="fas fa-check"></i> Advanced AI analytics</li>
+              <li><i class="fas fa-check"></i> Priority mobile alerts</li>
+              <li><i class="fas fa-check"></i> Cloud backup & storage</li>
+              <li><i class="fas fa-check"></i> Unlimited users</li>
+              <li><i class="fas fa-check"></i> Customer behavior heatmaps</li>
+              <li><i class="fas fa-check"></i> 24/7 priority support</li>
+              <li><i class="fas fa-check"></i> Custom integrations</li>
+            </ul>
+            <a href="#contact" class="btn-primary btn-block">Get Started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Enterprise</h3>
+              <p>Custom solutions for large organizations</p>
+            </div>
+            <div class="pricing-price">
+              <span class="amount-custom">Custom</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Everything in Ultra</li>
+              <li><i class="fas fa-check"></i> Multi-location support</li>
+              <li><i class="fas fa-check"></i> Dedicated account manager</li>
+              <li><i class="fas fa-check"></i> Custom AI training</li>
+              <li><i class="fas fa-check"></i> On-premise deployment</li>
+              <li><i class="fas fa-check"></i> SLA guarantee</li>
+            </ul>
+            <a href="#contact" class="btn-outline btn-block">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Testimonials</div>
+          <h2 class="section-title">Trusted by Businesses Worldwide</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Raqib has reduced our shoplifting incidents by 85% in the first 3
+              months. The real-time alerts are a game-changer for our security
+              team."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <strong>Sarah Johnson</strong>
+                <span>Security Manager, RetailMart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The AI detection is incredibly accurate. We've caught multiple
+              incidents that we would have completely missed with traditional
+              security methods."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <strong>Michael Chen</strong>
+                <span>Store Owner, TechGadgets Plus</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Easy to set up, intuitive to use, and the mobile app keeps our
+              team connected. Best investment we've made for store security."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <strong>Emma Williams</strong>
+                <span>Operations Director, Fashion Hub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Protect Your Business?</h2>
+          <p>Start your 30-day free trial today. No credit card required.</p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn-large btn-white">
+              <i class="fas fa-rocket"></i>
+              Start Free Trial
+            </a>
+            <a href="#contact" class="btn-large btn-outline-white">
+              <i class="fas fa-phone"></i>
+              Schedule Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have questions? We're here to help you protect your business.</p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:sales@raqib.com">sales@raqib.com</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <strong>Address</strong>
+                  <span>123 Security Blvd, Tech City, TC 12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" required placeholder="John Doe" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" required placeholder="john@company.com" />
+              </div>
+              <div class="form-group">
+                <label>Company</label>
+                <input type="text" required placeholder="Your Company" />
+              </div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="+1 (234) 567-890" />
+              </div>
+              <div class="form-group full-width">
+                <label>Message</label>
+                <textarea
+                  rows="4"
+                  required
+                  placeholder="Tell us about your security needs..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary btn-block">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <i class="fas fa-shield-alt"></i>
+              <span>Raqib</span>
+            </div>
+            <p>
+              AI-powered shoplifting detection that protects your business 24/7.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#demo">Demo</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#press">Press Kit</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#help">Help Center</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Raqib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
