@@ -9,7 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/Landing-Raqib/assets/index-CHqzP0Za.js"></script>
+    <script>
+      if (sessionStorage.redirect) {
+        history.replaceState(null, "", sessionStorage.redirect);
+        sessionStorage.removeItem("redirect");
+      }
+    </script>
+    <script type="module" crossorigin src="/Landing-Raqib/assets/index-3FKGmFl6.js"></script>
     <link rel="stylesheet" crossorigin href="/Landing-Raqib/assets/index-CAnkX0oE.css">
   </head>
   <body>
