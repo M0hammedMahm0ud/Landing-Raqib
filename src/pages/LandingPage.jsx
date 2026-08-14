@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowDown,
   ArrowRight,
@@ -382,9 +383,9 @@ export function LandingPage() {
               </a>
             </div>
             <div className={ui.navActions}>
-              <a href="/login" className={cx(ui.button, ui.secondary)}>
+              <Link to="/login" className={cx(ui.button, ui.secondary)}>
                 Login
-              </a>
+              </Link>
               <a
                 href="#contact"
                 onClick={(e) => handleSmoothScroll(e, "#contact")}
@@ -429,9 +430,9 @@ export function LandingPage() {
           </a>
         </nav>
         <div className={ui.navButtons}>
-          <a href="/login" className={cx(ui.button, ui.secondary)}>
+          <Link to="/login" className={cx(ui.button, ui.secondary)}>
             Login
-          </a>
+          </Link>
           <a
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, "#contact")}
@@ -1010,9 +1011,9 @@ export function LandingPage() {
               >
                 Start Free Trial
               </a>
-              <a href="/login" className={cx(ui.button, ui.large, ui.outlineWhite)}>
+              <Link to="/login" className={cx(ui.button, ui.large, ui.outlineWhite)}>
                 Sign In
-              </a>
+              </Link>
             </div>
           </div>
         </div>

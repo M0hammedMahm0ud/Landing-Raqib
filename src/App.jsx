@@ -15,7 +15,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   const { t } = useTranslation();
   return (
-    <Router>
+    <Router basename="/Landing-Raqib">
       <AdminAuthProvider>
         <Toaster position="top-right" />
         <Routes>
