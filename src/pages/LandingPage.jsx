@@ -32,6 +32,8 @@ import {
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
+const DEMO_VIDEO_ID = "-M6i2UghyEc8";
+
 const ui = {
   page: "landing-page min-h-screen overflow-x-hidden text-gray-900 [line-height:1.6]",
   container: "mx-auto max-w-[1200px] px-5",
@@ -64,10 +66,12 @@ const ui = {
   secondary: "bg-gray-100 text-gray-700 hover:bg-gray-200",
   outline:
     "border-2 border-violet-500 bg-transparent text-violet-500 hover:bg-violet-500 hover:text-white",
-  large: "px-8 py-4 text-[1.1rem] max-[480px]:px-6 max-[480px]:py-3.5 max-[480px]:text-base",
+  large:
+    "px-8 py-4 text-[1.1rem] max-[480px]:px-6 max-[480px]:py-3.5 max-[480px]:text-base",
   white:
     "bg-white text-violet-500 hover:-translate-y-0.5 hover:shadow-[0_6px_12px_rgba(0,0,0,0.1)]",
-  outlineWhite: "border-2 border-white bg-transparent text-white hover:bg-white hover:text-violet-500",
+  outlineWhite:
+    "border-2 border-white bg-transparent text-white hover:bg-white hover:text-violet-500",
   block: "w-full justify-center",
   hero: "flex min-h-screen items-center py-20 pt-[120px]",
   heroContent:
@@ -98,7 +102,8 @@ const ui = {
     "rounded-2xl bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-200 dark:border-transparent",
   mockupHeader:
     "mb-4 flex items-center justify-between border-b border-gray-200 dark:border-white/10 pb-3",
-  mockupDots: "flex gap-1.5 [&_span]:h-3 [&_span]:w-3 [&_span]:rounded-full [&_span]:bg-gray-300 dark:[&_span]:bg-gray-600",
+  mockupDots:
+    "flex gap-1.5 [&_span]:h-3 [&_span]:w-3 [&_span]:rounded-full [&_span]:bg-gray-300 dark:[&_span]:bg-gray-600",
   mockupTitle: "text-sm font-semibold text-gray-900 dark:text-white",
   mockupContent: "relative",
   pulseIndicator:
@@ -118,6 +123,7 @@ const ui = {
   sectionDescription: "text-[1.1rem] text-gray-600",
   demoGrid: "grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.5fr_1fr]",
   videoWrapper: "relative overflow-hidden rounded-2xl",
+  videoFrame: "h-full w-full aspect-video border-0",
   videoPlaceholder:
     "flex aspect-video cursor-pointer flex-col items-center justify-center gap-4 rounded-2xl border-2 border-violet-500/20 bg-gradient-to-br from-violet-500/10 to-blue-500/10 transition-all duration-300 hover:border-violet-600 hover:from-violet-500/20 hover:to-blue-500/20 [&_svg]:h-16 [&_svg]:w-16 [&_svg]:text-violet-600 [&_svg]:transition-transform [&_p]:text-2xl [&_p]:font-bold [&_p]:text-gray-900 [&_span]:text-gray-600 hover:[&_svg]:scale-110",
   demoHighlights: "flex flex-col gap-6",
@@ -127,11 +133,13 @@ const ui = {
     "flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/20 to-violet-600/20 text-2xl text-violet-600",
   highlightContent:
     "[&_h4]:mb-2 [&_h4]:text-[1.1rem] [&_h4]:font-bold [&_h4]:text-gray-900 [&_p]:text-[0.95rem] [&_p]:text-gray-600",
-  partnersLogos: "mb-16 grid grid-cols-1 gap-8 min-[481px]:grid-cols-3 lg:grid-cols-6",
+  partnersLogos:
+    "mb-16 grid grid-cols-1 gap-8 min-[481px]:grid-cols-3 lg:grid-cols-6",
   partnerItem: "flex items-center justify-center",
   partnerBox:
     "flex aspect-[16/10] w-full items-center justify-center rounded-2xl border-2 border-violet-500/10 bg-gradient-to-br from-violet-500/5 to-blue-500/5 font-semibold text-gray-600 transition-all duration-300 hover:-translate-y-1 hover:border-violet-600 hover:from-violet-500/10 hover:to-blue-500/10",
-  partnersStats: "grid grid-cols-1 gap-8 min-[481px]:grid-cols-2 lg:grid-cols-4",
+  partnersStats:
+    "grid grid-cols-1 gap-8 min-[481px]:grid-cols-2 lg:grid-cols-4",
   statNumber:
     "bg-gradient-to-br from-violet-600 to-violet-800 bg-clip-text text-[2.5rem] font-extrabold text-transparent",
   statText: "mt-2 text-base text-gray-600",
@@ -140,12 +148,17 @@ const ui = {
     "feature-card rounded-2xl bg-white p-8 shadow-[0_4px_6px_rgba(0,0,0,0.05)] [&_h3]:mb-3 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-gray-900 [&_p]:text-gray-600",
   featureIcon:
     "mb-6 flex h-[60px] w-[60px] items-center justify-center rounded-2xl text-2xl",
-  featureViolet: "bg-gradient-to-br from-violet-500/20 to-violet-600/20 text-violet-600",
-  featureBlue: "bg-gradient-to-br from-blue-500/20 to-blue-600/20 text-blue-600",
-  featureGreen: "bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 text-emerald-600",
-  featureYellow: "bg-gradient-to-br from-amber-500/20 to-amber-600/20 text-amber-600",
+  featureViolet:
+    "bg-gradient-to-br from-violet-500/20 to-violet-600/20 text-violet-600",
+  featureBlue:
+    "bg-gradient-to-br from-blue-500/20 to-blue-600/20 text-blue-600",
+  featureGreen:
+    "bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 text-emerald-600",
+  featureYellow:
+    "bg-gradient-to-br from-amber-500/20 to-amber-600/20 text-amber-600",
   featureRed: "bg-gradient-to-br from-red-500/20 to-red-600/20 text-red-600",
-  featurePurple: "bg-gradient-to-br from-purple-500/20 to-purple-600/20 text-purple-600",
+  featurePurple:
+    "bg-gradient-to-br from-purple-500/20 to-purple-600/20 text-purple-600",
   steps:
     "mx-auto grid max-w-[1180px] grid-cols-1 items-center justify-items-center gap-8 lg:grid-cols-[minmax(260px,1fr)_120px_minmax(260px,1fr)_120px_minmax(260px,1fr)]",
   step: "w-full max-w-[320px] text-center",
@@ -153,12 +166,14 @@ const ui = {
     "mb-4 bg-gradient-to-br from-violet-600 to-violet-800 bg-clip-text text-5xl font-extrabold text-transparent",
   stepIcon:
     "mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-violet-700 text-3xl text-white",
-  stepContent: "[&_h3]:mb-3 [&_h3]:text-2xl [&_h3]:text-gray-900 [&_p]:text-gray-600",
+  stepContent:
+    "[&_h3]:mb-3 [&_h3]:text-2xl [&_h3]:text-gray-900 [&_p]:text-gray-600",
   stepConnector:
     "relative flex h-16 w-full items-center justify-center lg:h-auto lg:flex-col lg:justify-center lg:gap-0",
   stepArrow:
     "relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-violet-600 text-white shadow-lg shadow-violet-500/30 animate-[landing-pulse_2.5s_ease-in-out_infinite]",
-  pricingCards: "mx-auto grid max-w-[1100px] grid-cols-1 gap-8 lg:grid-cols-3 items-start",
+  pricingCards:
+    "mx-auto grid max-w-[1100px] grid-cols-1 gap-8 lg:grid-cols-3 items-start",
   pricingCard:
     "pricing-card relative rounded-3xl bg-white p-10 shadow-[0_4px_6px_rgba(0,0,0,0.05)]",
   pricingFeatured:
@@ -174,11 +189,9 @@ const ui = {
   amountCustom: "text-[2.5rem] font-extrabold",
   pricingFeatures:
     "mb-8 list-none [&_svg]:h-5 [&_svg]:w-5 [&_svg]:shrink-0 [&_svg]:text-emerald-600 [&_li]:flex [&_li]:items-center [&_li]:gap-3 [&_li]:border-b [&_li]:border-black/5 [&_li]:py-3",
-  pricingFeaturesFeatured:
-    "[&_svg]:text-emerald-200 [&_li]:border-white/10",
+  pricingFeaturesFeatured: "[&_svg]:text-emerald-200 [&_li]:border-white/10",
   testimonialsGrid: "grid grid-cols-1 gap-8 lg:grid-cols-3",
-  testimonialCard:
-    "testimonial-card rounded-2xl bg-gray-50 p-8",
+  testimonialCard: "testimonial-card rounded-2xl bg-gray-50 p-8",
   testimonialStars: "mb-4 text-amber-400",
   testimonialText: "mb-6 italic leading-[1.7] text-gray-700",
   testimonialAuthor: "flex items-center gap-4",
@@ -187,21 +200,26 @@ const ui = {
   authorInfo:
     "[&_span]:text-sm [&_span]:text-gray-600 [&_strong]:mb-1 [&_strong]:block [&_strong]:text-gray-900",
   cta: "bg-gradient-to-br from-violet-600 to-violet-800 py-20 text-center text-white",
-  ctaContent: "[&_h2]:mb-4 [&_h2]:text-[2.5rem] [&_h2]:font-extrabold [&_p]:mb-8 [&_p]:text-xl [&_p]:opacity-90",
+  ctaContent:
+    "[&_h2]:mb-4 [&_h2]:text-[2.5rem] [&_h2]:font-extrabold [&_p]:mb-8 [&_p]:text-xl [&_p]:opacity-90",
   ctaButtons: "flex flex-col justify-center gap-4 min-[481px]:flex-row",
   contactGrid: "grid grid-cols-1 gap-16 lg:grid-cols-[1fr_1.5fr]",
-  contactInfo: "[&_h2]:mb-4 [&_h2]:text-[2.5rem] [&_h2]:text-gray-900 [&_p]:mb-8 [&_p]:text-gray-600",
+  contactInfo:
+    "[&_h2]:mb-4 [&_h2]:text-[2.5rem] [&_h2]:text-gray-900 [&_p]:mb-8 [&_p]:text-gray-600",
   contactMethods: "flex flex-col gap-6",
   contactMethod:
     "flex items-center gap-4 [&_a]:text-gray-600 [&_a]:no-underline [&_a:hover]:text-violet-600 [&>svg]:h-[50px] [&>svg]:w-[50px] [&>svg]:rounded-xl [&>svg]:bg-gradient-to-br [&>svg]:from-violet-500/20 [&>svg]:to-violet-600/20 [&>svg]:p-3.5 [&>svg]:text-violet-600 [&_span]:text-gray-600 [&_strong]:mb-1 [&_strong]:block [&_strong]:text-gray-900",
-  contactFormWrapper: "rounded-3xl bg-white p-10 shadow-[0_10px_30px_rgba(0,0,0,0.1)]",
+  contactFormWrapper:
+    "rounded-3xl bg-white p-10 shadow-[0_10px_30px_rgba(0,0,0,0.1)]",
   contactForm: "grid grid-cols-1 gap-6 min-[481px]:grid-cols-2",
   formGroup:
     "flex flex-col [&_input]:rounded-lg [&_input]:border-2 [&_input]:border-gray-200 [&_input]:p-3 [&_input]:text-base [&_input]:transition-colors [&_input:focus]:border-violet-600 [&_input:focus]:outline-none [&_label]:mb-2 [&_label]:font-semibold [&_label]:text-gray-700 [&_textarea]:rounded-lg [&_textarea]:border-2 [&_textarea]:border-gray-200 [&_textarea]:p-3 [&_textarea]:text-base [&_textarea]:transition-colors [&_textarea:focus]:border-violet-600 [&_textarea:focus]:outline-none",
   fullWidth: "col-span-full",
   footer: "bg-gray-900 py-5 pt-[60px] text-white",
-  footerContent: "mb-12 grid grid-cols-1 gap-12 min-[481px]:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]",
-  footerLogo: "mb-4 flex items-center gap-2 text-2xl font-extrabold [&_svg]:h-7 [&_svg]:w-7 [&_svg]:text-violet-400",
+  footerContent:
+    "mb-12 grid grid-cols-1 gap-12 min-[481px]:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]",
+  footerLogo:
+    "mb-4 flex items-center gap-2 text-2xl font-extrabold [&_svg]:h-7 [&_svg]:w-7 [&_svg]:text-violet-400",
   footerSection:
     "[&_h4]:mb-4 [&_h4]:text-[1.1rem] [&_li]:mb-3 [&_p]:mb-6 [&_p]:leading-[1.7] [&_p]:opacity-80 [&_ul]:list-none [&_ul]:p-0 [&_a]:text-white/70 [&_a]:no-underline [&_a]:transition-colors [&_a:hover]:text-violet-400",
   socialLinks:
@@ -213,6 +231,7 @@ export function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navbarScrolled, setNavbarScrolled] = useState(false);
   const [contactSubmitting, setContactSubmitting] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   useEffect(() => {
     // Handle scroll for navbar effect
@@ -527,7 +546,9 @@ export function LandingPage() {
                   <div className={ui.mockupContent}>
                     <div className={ui.pulseIndicator}></div>
                     <div className={ui.cameraGrid}>
-                      <div className={cx(ui.cameraFeed, ui.cameraFeedActive)}></div>
+                      <div
+                        className={cx(ui.cameraFeed, ui.cameraFeedActive)}
+                      ></div>
                       <div className={ui.cameraFeed}></div>
                       <div className={ui.cameraFeed}></div>
                       <div className={ui.cameraFeed}></div>
@@ -556,11 +577,33 @@ export function LandingPage() {
           </div>
           <div className={ui.demoGrid}>
             <div className={ui.videoWrapper}>
-              <div className={ui.videoPlaceholder}>
-                <PlayCircle aria-hidden="true" />
-                <p>Demo Video</p>
-                <span>Click to watch how Raqib protects your business</span>
-              </div>
+              {videoPlaying ? (
+                <iframe
+                  className={ui.videoFrame}
+                  src={`https://www.youtube.com/embed/${DEMO_VIDEO_ID}?autoplay=1&rel=0`}
+                  title="Raqib product demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <div
+                  className={ui.videoPlaceholder}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Play demo video"
+                  onClick={() => setVideoPlaying(true)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setVideoPlaying(true);
+                    }
+                  }}
+                >
+                  <PlayCircle aria-hidden="true" />
+                  <p>Demo Video</p>
+                  <span>Click to watch how Raqib protects your business</span>
+                </div>
+              )}
             </div>
             <div className={ui.demoHighlights}>
               <div className={ui.highlightItem}>
@@ -845,7 +888,9 @@ export function LandingPage() {
                 <span className={ui.amount}>399</span>
                 <span className={ui.period}>/month</span>
               </div>
-              <ul className={cx(ui.pricingFeatures, ui.pricingFeaturesFeatured)}>
+              <ul
+                className={cx(ui.pricingFeatures, ui.pricingFeaturesFeatured)}
+              >
                 <li>
                   <Check aria-hidden="true" /> Unlimited cameras
                 </li>
@@ -932,7 +977,11 @@ export function LandingPage() {
             <div className={ui.testimonialCard}>
               <div className={ui.testimonialStars}>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} aria-hidden="true" className="inline h-4 w-4 fill-current" />
+                  <Star
+                    key={i}
+                    aria-hidden="true"
+                    className="inline h-4 w-4 fill-current"
+                  />
                 ))}
               </div>
               <p className={ui.testimonialText}>
@@ -954,7 +1003,11 @@ export function LandingPage() {
             <div className={ui.testimonialCard}>
               <div className={ui.testimonialStars}>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} aria-hidden="true" className="inline h-4 w-4 fill-current" />
+                  <Star
+                    key={i}
+                    aria-hidden="true"
+                    className="inline h-4 w-4 fill-current"
+                  />
                 ))}
               </div>
               <p className={ui.testimonialText}>
@@ -976,7 +1029,11 @@ export function LandingPage() {
             <div className={ui.testimonialCard}>
               <div className={ui.testimonialStars}>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} aria-hidden="true" className="inline h-4 w-4 fill-current" />
+                  <Star
+                    key={i}
+                    aria-hidden="true"
+                    className="inline h-4 w-4 fill-current"
+                  />
                 ))}
               </div>
               <p className={ui.testimonialText}>
@@ -1011,7 +1068,10 @@ export function LandingPage() {
               >
                 Start Free Trial
               </a>
-              <Link to="/login" className={cx(ui.button, ui.large, ui.outlineWhite)}>
+              <Link
+                to="/login"
+                className={cx(ui.button, ui.large, ui.outlineWhite)}
+              >
                 Sign In
               </Link>
             </div>
@@ -1084,7 +1144,10 @@ export function LandingPage() {
                 >
                   {contactSubmitting ? (
                     <>
-                      <Loader2 aria-hidden="true" className="h-5 w-5 animate-spin" />
+                      <Loader2
+                        aria-hidden="true"
+                        className="h-5 w-5 animate-spin"
+                      />
                       Sending...
                     </>
                   ) : (
