@@ -1092,7 +1092,8 @@ export function LandingPage() {
             <div className={ui.contactInfo}>
               <h2>Get in Touch</h2>
               <p>
-                Have questions? We're here to help you protect your business.
+                Have questions ? <br />
+                We're here to help you protect your business.
               </p>
 
               <div className={ui.contactMethods}>
@@ -1100,21 +1101,23 @@ export function LandingPage() {
                   <Mail aria-hidden="true" />
                   <div>
                     <strong>Email</strong>
-                    <a href="mailto:hello@raqib.io">hello@raqib.io</a>
+                    <a href="mailto:yousryabdelrazek726@gmail.com">
+                      yousryabdelrazek726@gmail.com
+                    </a>
                   </div>
                 </div>
                 <div className={ui.contactMethod}>
                   <Phone aria-hidden="true" />
                   <div>
                     <strong>Phone</strong>
-                    <span>+1 (555) 123-4567</span>
+                    <span>+20 11 23571126</span>
                   </div>
                 </div>
                 <div className={ui.contactMethod}>
                   <MapPin aria-hidden="true" />
                   <div>
                     <strong>Address</strong>
-                    <span>123 Tech Street, San Francisco, CA 94107</span>
+                    <span>El-Fayoum</span>
                   </div>
                 </div>
               </div>
