@@ -32,7 +32,7 @@ import {
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
-const DEMO_VIDEO_ID = "-M6i2UghyEc8";
+const DEMO_VIDEO_ID = "M6i2UghyEc8";
 
 const ui = {
   page: "landing-page min-h-screen overflow-x-hidden text-gray-900 [line-height:1.6]",
@@ -125,7 +125,7 @@ const ui = {
   videoWrapper: "relative overflow-hidden rounded-2xl",
   videoFrame: "h-full w-full aspect-video border-0",
   videoPlaceholder:
-    "flex aspect-video cursor-pointer flex-col items-center justify-center gap-4 rounded-2xl border-2 border-violet-500/20 bg-gradient-to-br from-violet-500/10 to-blue-500/10 transition-all duration-300 hover:border-violet-600 hover:from-violet-500/20 hover:to-blue-500/20 [&_svg]:h-16 [&_svg]:w-16 [&_svg]:text-violet-600 [&_svg]:transition-transform [&_p]:text-2xl [&_p]:font-bold [&_p]:text-gray-900 [&_span]:text-gray-600 hover:[&_svg]:scale-110",
+    "relative flex aspect-video cursor-pointer flex-col items-center justify-center gap-4 rounded-2xl border-2 border-white/20 bg-cover bg-center transition-all duration-300 hover:border-violet-600 [&_svg]:relative [&_svg]:z-10 [&_svg]:h-16 [&_svg]:w-16 [&_svg]:text-white [&_svg]:drop-shadow-lg [&_svg]:transition-transform [&_p]:relative [&_p]:z-10 [&_p]:text-2xl [&_p]:font-bold [&_p]:text-white [&_p]:drop-shadow-md [&_span]:relative [&_span]:z-10 [&_span]:text-gray-100 [&_span]:drop-shadow-md hover:[&_svg]:scale-110",
   demoHighlights: "flex flex-col gap-6",
   highlightItem:
     "flex items-start gap-4 rounded-2xl bg-white p-6 shadow-[0_4px_6px_rgba(0,0,0,0.05)] transition-all duration-300 hover:translate-x-2.5 hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]",
@@ -591,6 +591,11 @@ export function LandingPage() {
                   role="button"
                   tabIndex={0}
                   aria-label="Play demo video"
+                  style={{
+                    backgroundImage: `url(https://i.ytimg.com/vi/${DEMO_VIDEO_ID}/hqdefault.jpg)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
                   onClick={() => setVideoPlaying(true)}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
@@ -599,6 +604,7 @@ export function LandingPage() {
                     }
                   }}
                 >
+                  <div className="absolute inset-0 rounded-2xl bg-black/40" />
                   <PlayCircle aria-hidden="true" />
                   <p>Demo Video</p>
                   <span>Click to watch how Raqib protects your business</span>
