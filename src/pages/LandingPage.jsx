@@ -38,10 +38,10 @@ const ui = {
   page: "landing-page min-h-screen overflow-x-hidden text-gray-900 [line-height:1.6]",
   container: "mx-auto max-w-[1200px] px-5",
   bgPattern:
-    "fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-violet-50 via-white to-violet-100 before:absolute before:-right-[200px] before:-top-[200px] before:h-[800px] before:w-[800px] before:animate-[landing-float_20s_ease-in-out_infinite] before:rounded-full before:bg-[radial-gradient(circle,rgba(139,92,246,0.1)_0%,transparent_70%)] after:absolute after:-bottom-[150px] after:-left-[150px] after:h-[600px] after:w-[600px] after:animate-[landing-float_15s_ease-in-out_infinite_reverse] after:rounded-full after:bg-[radial-gradient(circle,rgba(109,40,217,0.08)_0%,transparent_70%)]",
+    "fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-violet-50 via-white to-violet-100 before:absolute before:-right-[200px] before:-top-[200px] before:h-[800px] before:w-[800px] md:before:animate-[landing-float_20s_ease-in-out_infinite] before:rounded-full before:bg-[radial-gradient(circle,rgba(139,92,246,0.1)_0%,transparent_70%)] after:absolute after:-bottom-[150px] after:-left-[150px] after:h-[600px] after:w-[600px] md:after:animate-[landing-float_15s_ease-in-out_infinite_reverse] after:rounded-full after:bg-[radial-gradient(circle,rgba(109,40,217,0.08)_0%,transparent_70%)]",
   nav: (scrolled) =>
     cx(
-      "fixed left-0 top-0 z-[1000] w-full bg-white/95 shadow-[0_1px_3px_rgba(0,0,0,0.1)] backdrop-blur-[10px]",
+      "fixed left-0 top-0 z-[1000] w-full bg-white/95 shadow-[0_1px_3px_rgba(0,0,0,0.1)] md:backdrop-blur-[10px]",
       scrolled && "bg-white/98 shadow-[0_4px_12px_rgba(0,0,0,0.1)]",
     ),
   navContent: "flex items-center justify-between py-4",
@@ -53,8 +53,8 @@ const ui = {
     "block cursor-pointer border-0 bg-transparent text-2xl text-gray-700 md:hidden",
   mobileMenu: (open) =>
     cx(
-      "fixed inset-0 z-[999] hidden max-h-screen flex-col overflow-y-auto bg-white px-5 pb-5 pt-[100px]",
-      open && "flex",
+      "absolute left-0 right-0 top-full z-[999] flex-col overflow-y-auto border-t border-gray-200 bg-white px-5 pb-6 pt-5 shadow-[0_10px_30px_rgba(0,0,0,0.1)]",
+      open ? "flex" : "hidden",
     ),
   mobileMenuNav:
     "mb-8 flex flex-col gap-6 border-b border-gray-200 pb-8 [&_a]:cursor-pointer [&_a]:font-semibold [&_a]:text-gray-700 [&_a]:no-underline [&_a:hover]:text-violet-600",
@@ -93,7 +93,7 @@ const ui = {
   statLabel: "text-sm text-gray-600",
   heroImage: "relative animate-[fade-in-up_0.8s_ease-out_0.5s_backwards]",
   floatingCard:
-    "absolute z-10 m-0 flex animate-[float-card_3s_ease-in-out_infinite] items-center gap-3 rounded-2xl bg-white p-4 shadow-[0_10px_30px_rgba(0,0,0,0.1)] [&_svg]:h-6 [&_svg]:w-6 [&_svg]:text-violet-500 [&_p]:m-0 [&_p]:text-xs [&_p]:text-gray-600 [&_strong]:m-0 [&_strong]:block [&_strong]:text-sm [&_strong]:text-gray-900",
+    "absolute z-10 m-0 flex md:animate-[float-card_3s_ease-in-out_infinite] items-center gap-3 rounded-2xl bg-white p-4 shadow-[0_10px_30px_rgba(0,0,0,0.1)] [&_svg]:h-6 [&_svg]:w-6 [&_svg]:text-violet-500 [&_p]:m-0 [&_p]:text-xs [&_p]:text-gray-600 [&_strong]:m-0 [&_strong]:block [&_strong]:text-sm [&_strong]:text-gray-900",
   card1: "left-[-10%] top-[10%]",
   card2: "right-[-10%] top-1/2 [animation-delay:1s]",
   card3: "bottom-[10%] left-0 [animation-delay:2s]",
@@ -107,12 +107,12 @@ const ui = {
   mockupTitle: "text-sm font-semibold text-gray-900 dark:text-white",
   mockupContent: "relative",
   pulseIndicator:
-    "absolute right-2.5 top-2.5 h-3 w-3 animate-[landing-pulse_2s_infinite] rounded-full bg-emerald-500 shadow-[0_0_0_0_#10b981]",
+    "absolute right-2.5 top-2.5 h-3 w-3 md:animate-[landing-pulse_2s_infinite] rounded-full bg-emerald-500 shadow-[0_0_0_0_#10b981]",
   cameraGrid: "grid grid-cols-2 gap-2",
   cameraFeed:
     "relative aspect-video rounded-lg border-2 border-white/10 bg-gradient-to-br from-violet-500/20 to-blue-500/20",
   cameraFeedActive:
-    "border-violet-600 bg-gradient-to-br from-violet-500/30 to-violet-600/30 after:absolute after:right-[5px] after:top-[5px] after:h-2 after:w-2 after:animate-[landing-pulse_1.5s_infinite] after:rounded-full after:bg-red-500",
+    "border-violet-600 bg-gradient-to-br from-violet-500/30 to-violet-600/30 after:absolute after:right-[5px] after:top-[5px] after:h-2 after:w-2 md:after:animate-[landing-pulse_1.5s_infinite] after:rounded-full after:bg-red-500",
   section: "py-20",
   whiteSection: "bg-white py-20",
   sectionHeader: "mx-auto mb-16 max-w-[700px] text-center",
@@ -171,7 +171,7 @@ const ui = {
   stepConnector:
     "relative flex h-16 w-full items-center justify-center lg:h-auto lg:flex-col lg:justify-center lg:gap-0",
   stepArrow:
-    "relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-violet-600 text-white shadow-lg shadow-violet-500/30 animate-[landing-pulse_2.5s_ease-in-out_infinite]",
+    "relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-violet-600 text-white shadow-lg shadow-violet-500/30 md:animate-[landing-pulse_2.5s_ease-in-out_infinite]",
   pricingCards:
     "mx-auto grid max-w-[1100px] grid-cols-1 gap-8 lg:grid-cols-3 items-start",
   pricingCard:
@@ -243,19 +243,6 @@ export function LandingPage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    // Handle body overflow when mobile menu is open
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileMenuOpen]);
 
   useEffect(() => {
     // Intersection Observer for scroll animations
@@ -421,46 +408,49 @@ export function LandingPage() {
             </button>
           </div>
         </div>
-      </nav>
 
-      {/* Mobile Menu */}
-      <div className={cx("mobile-menu", ui.mobileMenu(mobileMenuOpen))}>
-        <nav className={ui.mobileMenuNav}>
-          <a href="#demo" onClick={(e) => handleSmoothScroll(e, "#demo")}>
-            Demo
-          </a>
-          <a
-            href="#features"
-            onClick={(e) => handleSmoothScroll(e, "#features")}
-          >
-            Features
-          </a>
-          <a
-            href="#how-it-works"
-            onClick={(e) => handleSmoothScroll(e, "#how-it-works")}
-          >
-            How It Works
-          </a>
-          <a href="#pricing" onClick={(e) => handleSmoothScroll(e, "#pricing")}>
-            Pricing
-          </a>
-          <a href="#contact" onClick={(e) => handleSmoothScroll(e, "#contact")}>
-            Contact
-          </a>
-        </nav>
-        <div className={ui.navButtons}>
-          <Link to="/login" className={cx(ui.button, ui.secondary)}>
-            Login
-          </Link>
-          <a
-            href="#contact"
-            onClick={(e) => handleSmoothScroll(e, "#contact")}
-            className={cx(ui.button, ui.primary)}
-          >
-            Get Started
-          </a>
+        {/* Mobile Menu */}
+        <div className={cx("mobile-menu", ui.mobileMenu(mobileMenuOpen))}>
+          <div className={ui.mobileMenuNav}>
+            <a href="#demo" onClick={(e) => handleSmoothScroll(e, "#demo")}>
+              Demo
+            </a>
+            <a
+              href="#features"
+              onClick={(e) => handleSmoothScroll(e, "#features")}
+            >
+              Features
+            </a>
+            <a
+              href="#how-it-works"
+              onClick={(e) => handleSmoothScroll(e, "#how-it-works")}
+            >
+              How It Works
+            </a>
+            <a
+              href="#pricing"
+              onClick={(e) => handleSmoothScroll(e, "#pricing")}
+            >
+              Pricing
+            </a>
+            <a href="#contact" onClick={(e) => handleSmoothScroll(e, "#contact")}>
+              Contact
+            </a>
+          </div>
+          <div className={ui.navButtons}>
+            <Link to="/login" className={cx(ui.button, ui.secondary)}>
+              Login
+            </Link>
+            <a
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "#contact")}
+              className={cx(ui.button, ui.primary)}
+            >
+              Get Started
+            </a>
+          </div>
         </div>
-      </div>
+      </nav>
 
       {/* Hero Section */}
       <section className={ui.hero}>
